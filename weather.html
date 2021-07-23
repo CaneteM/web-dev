@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Weather</title>
+</head>
+<body>
+
+<style>
+
+h1{
+     text-align: center;
+     font-weight: bold;
+     color: #1a64d6;
+     padding: 12px;
+     margin:0;
+     font-size: 34px;
+     font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h2{
+     text-align: center;
+     margin: 0;
+     font-size: 34px;
+     font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.degree{
+     color: black;
+     font-weight: normal;
+}
+
+.max_degree{
+     color:black;
+}
+
+
+.firm{
+    font-family:monospace;
+    font-size: 18px;
+    text-align: center;
+}
+
+.day{
+     font-family: monospace;
+     opacity: 65%;
+}
+
+.il{
+     font-weight: normal;
+}
+
+li{
+     list-style-type: none;
+     text-align: center;
+     padding: 10px 0px;
+     margin: 0 auto;
+     border-radius: 10px;
+     font-size: 18px;
+     font-weight: bold;
+     font-family: Arial, Helvetica, sans-serif;
+     max-width: 400px;
+}
+
+ul{
+
+    display: block;
+    list-style-type: none;
+    padding: 0;
+ 
+
+}
+
+h3{
+     text-align: center;
+     font-size: 18px;
+     font-weight: bold;
+     display: block;
+    
+}
+
+li:hover{
+     background-color: #FFFBEF;
+     border-radius: 10%;
+    
+     
+
+
+}
+p{
+    display: block;
+  
+}
+
+button{
+    display: block;
+    margin: 20px auto;
+    font-size: 16px;
+    padding: 16px 24px;
+    border-radius: 30px;
+    color:white;
+    border:1px solid #1a64d6;
+    background-color: #1a64d6;
+    box-shadow: 5px 5px 5px rgb(187, 185, 185);
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+
+
+button:hover{
+     color:#1a64d6;
+     background-color: white;
+     cursor: pointer;
+
+}
+
+</style>
+    
+    <h1>
+        <div>  
+          🌤 <br>
+             Currently 21° in Tokyo
+          </div> 
+     </h1>
+     <h2>
+             <div>
+     <span class='degree'>13° </span> 
+     <span class="max_degree">/ 23° </span>
+ </div>  
+     </h2>
+   
+    
+<ul>
+     <li>
+          <h3>
+          <p>
+               🌨 Tomorrow 
+               <div class = 'day'> 
+                    <spam class= 'il'>10°  </spam>/ 22°
+                </div>
+          </p>
+          </h3>
+     </li>
+
+     <li>
+          <h3>
+          🌥 Saturday
+          <p>
+               <div class='day'>
+                    <spam class='il'>15° </spam>/ 17°
+               </div>
+          </p>
+          </h3>
+
+     </li>
+
+     <li>
+          <h3>
+          <p>
+               ☀ Sunday
+          <div class='day'>
+               <spam class='il'>15° </spam>/ 17°
+          </div>
+          </p>
+          </h3>
+     </li>
+
+
+</ul>
+<br>
+<button>
+Change city
+</button>
+<br>
+<p class="firm">
+Coded by Michelle Cañete
+</p>
+
+ <script>
+      
+   
+
+    function searchButton(){
+        let city = prompt("What city you live in?");
+        let temperature = prompt("What temperature is it?");
+        
+
+        if (temperature >=0){
+          
+            let h1= document.querySelector("h1");
+            h1.innerHTML= "😊<br/>" +"Currently "+temperature+"°C"+" "+"in "+ city;
+
+
+           }else{ 
+              h1.innerHTML= "☹<br/>"  +"Currently "+temperature+"°C"+" "+"in  "+ city;
+
+                }
+
+        }
+    let cityButton = document.querySelector("button");
+    cityButton.addEventListener("click",searchButton);
+
+
+    </script>
+</body>
